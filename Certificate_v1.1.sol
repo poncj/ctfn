@@ -23,7 +23,6 @@ contract ArnionCertificate is ERC721, ERC721URIStorage, Ownable {
         if ((from != address(0)) && (to != address(0))) {
             revert("Error. Certificate can only be transfered by contract owner - Arnion");
         }
-        // require(from == address(0), "Error. Certificate can only be transfered by contract owner - Arnion");
         
         super._beforeTokenTransfer(from, to, tokenId, batchSize);
     }
